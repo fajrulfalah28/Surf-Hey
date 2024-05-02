@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey Surf!!</title>
+    <meta name="author" content="Muhammad Fajrul Falah">
+    <meta name="description" content="">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body class="font-family-jakarta flex">
+    <aside class="relative bg-sidebar h-screen w-64 hidden sm:block shadow-xl outline outline-gray-300 outline-3">
+        <div class="p-6">
+            <a href="index.html" class="text-black text-4xl font-bold uppercase flex items-center">
+                <i class="material-symbols-outlined mr-2" style="font-size: 4rem; font-weight: 100;">surfing</i>
+                Surf Hey!
+            </a>
+
+        </div>
+        <nav class="text-white text-base font-semibold pt-3">
+            <a href="dashboard.html" class="flex items-center active-nav-link text-white py-4 pl-6 nav-item bg-sky-800 hover:bg-sky-200 hover:text-black">
+                <i class="material-icons mr-2 text-xl">grid_view</i>
+                Dashboard
+            </a>
+            <a href="account.html" class="flex items-center text-black opacity-75 hover:opacity-100 py-4 pl-6 nav-item hover:bg-sky-200 hover:text-black">
+                <i class="material-icons mr-2 text-xl">person</i>
+                Account
+            </a>
+            <a href="login.html" class="flex items-center text-black opacity-75 hover:opacity-100 py-4 pl-6 nav-item hover:bg-sky-200 hover:text-black">
+                <i class="material-icons mr-2 text-xl">logout</i>
+                Sign Out
+            </a>
+    </aside>
+
+
+    <div class="w-full flex flex-col h-screen overflow-y-hidden">
+        <!-- Desktop Header -->
+        <header class="w-full items-center bg-white py-2 px-6 hidden sm:flex outline outline-gray-300 outline-3">
+            <div class="w-1/2">
+                <h1 class="text-3xl font-semibold text-black">Dashboard</h1>
+            </div>
+            <div class="relative w-1/2 flex justify-end">
+                <button id="account-button" class="relative z-10 w-12 h-12 rounded-full overflow-hidden border-4 border-gray-400 hover:border-gray-300 focus:border-gray-300 focus:outline-none">
+                    <img src="https://source.unsplash.com/random/400x400">
+                </button>
+            </div>
+        </header>
+
+        <header class="w-full bg-sidebar py-5 px-6 sm:hidden inline-block outline outline-gray-300 outline-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <i class="material-symbols-outlined text-black mobile-surfer">surfing</i>
+                    <a href="dashboard.html" class="text-black text-3xl font-bold uppercase hover:text-gray-300 ml-2">
+                        Surf Hey!
+                    </a>
+                </div>
+                <button id="nav-toggle" class="text-black text-3xl focus:outline-none">
+                    <i class="material-symbols-outlined">menu</i>
+                </button>
+            </div>
+
+            <nav id="mobile-nav" class="flex flex-col pt-4 hidden">
+                <a href="dashboard.html" class="flex items-center text-white py-2 pl-4 bg-sky-800 hover:bg-sky-200 hover:text-black">
+                    <i class="material-icons mr-2 text-xl">grid_view</i>
+                    Dashboard
+                </a>
+                <a href="account.html" class="flex items-center text-dark py-2 pl-4 hover:bg-sky-200 hover:text-black">
+                    <i class="material-icons mr-2 text-xl">person</i>
+                    My Account
+                </a>
+                <a href="login.html" class="flex items-center text-dark py-2 pl-4 hover:bg-sky-200 hover:text-black">
+                    <i class="material-icons mr-2 text-xl">logout</i>
+                    Sign Out
+                </a>
+                <!-- <button class="w-full text-dark bg-white cta-btn font-semibold py-2 mt-3 rounded-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
+                   <i class="fas fa-arrow-circle-up mr-3"></i> Upgrade to Pro!
+               </button> -->
+            </nav>
+        </header>
+
+        <div class="w-full overflow-x-hidden border-t flex flex-col">
+            <main class="w-full flex-grow p-6">
+                <h1 class="text-3xl font-bold text-black text-center text-5xl mb-5 sm:hidden">Post</h1>
+                <div class="feed flex flex-wrap">
+                    <div class="w-full md:w-full lg:w-2/5 p-4">
+                        <div class="bg-white rounded-lg overflow-hidden border-4 border-gray-300">
+                            <div class="relative overflow-hidden" style="padding-bottom: 100%;">
+                                <img src="https://source.unsplash.com/random" alt="Random Image"
+                                    class="absolute h-full w-full object-cover">
+                            </div>
+                            <div class="relative flex mt-4">
+                                <div class="w-3/4 flex items-center pl-4 pb-2">
+                                    <h3 class="text-xl font-semibold">Mengenal
+                                        Cara Kamu Memanage Waktu</h3>
+                                </div>
+                                <div class="w-1/4"></div>
+                                <p class="flex items-center overflow-hidden whitespace-nowrap overflow-ellipsis">
+                                    <span class="mr-2">18</span>
+                                    <i class="fas fa-check mr-4"></i>
+                                </p>
+                            </div>
+                            <div class="px-4 pb-4">
+                                <p class="text-sm text-gray-600">Halo semuanya! Kalian ada yang lagi menempuh bangku
+                                    perkuliahan ga nih? Nah kamu pasti suka kesulitan dalam mengatur waktu antara tugas
+                                    dengan kegiatan lain nih.
+                                    <br>-<br>
+                                    Nah disini kami mau tau lebih lanjut nih mengenai cara kalian mengatur waktu. Mohon
+                                    bantuannya untuk mengisi survey kami yaa! Terima kasih! ✨⭐
+
+                                    <br><br>#kuliah #timemanagement
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-full lg:w-3/5 p-4">
+                        <div class="bg-white rounded-lg overflow-hidden border-4 border-gray-300">
+                            <div class="relative flex mt-4">
+                                <div class="w-full flex items-center pl-4 pb-2">
+                                    <h2 class="text-2xl font-semibold">Survey Status</h2>
+                                </div>
+                            </div>
+
+                            <div class="flex justify-between mt-4 mx-4">
+                                <p class="text-base text-left">Goals: 12/100</p>
+                                <p class="text-base text-right">End Date: 20 April 2024</p>
+                            </div>
+
+                            <div class="relative mb-4 mx-4">
+                                <div class="w-full bg-sky-200 rounded-full">
+                                    <div class="bg-sky-800 h-4 rounded-full" style="width: 12%"></div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="flex flex-wrap">
+                            <div class="w-full">
+                                <div id="questions-container"></div>
+                                <div id="floating-card" class="hidden fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
+                                    <div class="bg-white rounded-lg p-4">
+                                        <div id="card-header" class="text-2xl font-semibold">
+                                            <p>See Participant</p>
+                                        </div>
+                                        <div id="card-content">
+                                            <p class="text-gray-500 mb-4">0 is chosing as anonymous</p>
+                                            <ul id="participant-list" class="grid grid-cols-3 gap-4"></ul>
+                                        </div>
+                                        <button id="close-card" class="bg-sky-800 text-white px-4 py-2 rounded-lg mt-4">Close</button>
+                                    </div>
+                                </div>
+                        
+                                <script>
+                                    $(document).ready(function () {
+                                        function generateRandomValues(containerId) {
+                                            var answers = [];
+                                            var remaining = 12;
+                        
+                                            for (var i = 1; i <= 3; i++) {
+                                                var maxChosen = Math.min(remaining, 6);
+                                                var chosen = Math.floor(Math.random() * (maxChosen + 1));
+                                                answers.push(chosen);
+                                                remaining -= chosen;
+                                            }
+                        
+                                            answers.push(remaining);
+                        
+                                            answers.sort(function () {
+                                                return 0.5 - Math.random();
+                                            });
+                        
+                                            var $container = $("#" + containerId);
+                                            $container.empty();
+                        
+                                            $.each(answers, function (index, chosen) {
+                                                var answer = "Answer " + (index + 1);
+                                                var percentage = (chosen / 12) * 100;
+                        
+                                                var answerHtml = `
+                                                    <div class="flex justify-between mt-4 mx-4">
+                                                        <p class="text-base text-left">${answer}</p>
+                                                        <p class="text-base text-right chosen-value text-blue-500">${chosen} Chosen</span></p>
+                                                    </div>
+                                                    <div class="relative mb-4 mx-4">
+                                                        <div class="w-full bg-sky-200 rounded-full">
+                                                            <div class="bg-sky-800 h-4 rounded-full" style="width: ${percentage}%"></div>
+                                                        </div>
+                                                    </div>
+                                                `;
+                        
+                                                $container.append(answerHtml);
+                                            });
+                                        }
+                        
+                                        var $questionsContainer = $("#questions-container");
+                                        var $floatingCard = $("#floating-card");
+                                        var $participantList = $("#participant-list");
+                        
+                                        for (var i = 1; i <= 5; i++) {
+                                            var questionHtml = `
+                                                <div class="w-full mt-4">
+                                                    <div class="bg-white rounded-lg overflow-hidden border-4 border-gray-300">
+                                                        <div class="relative flex mt-4">
+                                                            <div class="w-full flex flex-col  pl-4 pb-2">
+                                                                <h2 class="text-2xl font-semibold">Question ${i}</h2>
+                                                                <p class="text-base text-left">Isi dari pertanyaannya</p>
+                                                            </div>
+                                                        </div>
+                        
+                                                        <div id="answers-container-${i}"></div>
+                                                    </div>
+                                                </div>
+                                            `;
+                        
+                                            $questionsContainer.append(questionHtml);
+                        
+                                            var containerId = "answers-container-" + i;
+                                            generateRandomValues(containerId);
+                                        }
+                        
+                                        $(".chosen-value").on("click", function () {
+                                            var chosenValue = $(this).text().trim().split(" ")[0];
+                                        
+                                            $participantList.empty();
+                                        
+                                            for (var i = 1; i <= chosenValue; i++) {
+                                                var profilePicture = `https://source.unsplash.com/random/80x80?sig=${i}`;
+                                                var participantHtml = `
+                                                    <li class="flex items-center">
+                                                        <img src="${profilePicture}" alt="Profile Picture" class="w-8 h-8 rounded-full mr-2">
+                                                        <span>Participant ${i}</span>
+                                                    </li>
+                                                `;
+                                        
+                                                $participantList.append(participantHtml);
+                                            }
+                                        
+                                            $floatingCard.removeClass("hidden");
+                                        });
+                        
+                                        $("#close-card").on("click", function () {
+                                            $floatingCard.addClass("hidden");
+                                        });
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+            </main>
+        </div>
+
+    </div>
+
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+        integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+
+    <!-- ChartJS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+
+    <!-- ChartJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"
+        integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

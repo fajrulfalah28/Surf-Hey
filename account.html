@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey Surf!!</title>
+    <meta name="author" content="Muhammad Fajrul Falah">
+    <meta name="description" content="">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body class="font-family-jakarta flex">
+    <aside class="relative bg-sidebar h-screen w-64 hidden sm:block shadow-xl outline outline-gray-300 outline-3">
+        <div class="p-6">
+            <a href="index.html" class="text-black text-4xl font-bold uppercase flex items-center">
+                <i class="material-symbols-outlined mr-2" style="font-size: 4rem; font-weight: 100;">surfing</i>
+                Surf Hey!
+            </a>
+
+        </div>
+        <nav class="text-white text-base font-semibold pt-3">
+            <a href="dashboard.html" class="flex items-center text-black opacity-75 hover:opacity-100 py-4 pl-6 nav-item hover:bg-sky-200 hover:text-black">
+                <i class="material-icons mr-2 text-xl">grid_view</i>
+                Dashboard
+            </a>
+            <a href="account.html" class="flex items-center text-white py-4 pl-6 nav-item bg-sky-800 hover:bg-sky-200 hover:text-black">
+                <i class="material-icons mr-2 text-xl">person</i>
+                Account
+            </a>
+            <a href="login.html" class="flex items-center text-black opacity-75 hover:opacity-100 py-4 pl-6 nav-item hover:bg-sky-200 hover:text-black">
+                <i class="material-icons mr-2 text-xl">logout</i>
+                Sign Out
+            </a>
+    </aside>
+
+
+    <div class="w-full flex flex-col h-screen overflow-y-hidden">
+        <!-- Desktop Header -->
+        <header class="w-full items-center bg-white py-2 px-6 hidden sm:flex outline outline-gray-300 outline-3">
+            <div class="w-1/2">
+                <h1 class="text-3xl font-semibold text-black">Account</h1>
+            </div>
+            <div class="relative w-1/2 flex justify-end">
+                <button id="account-button" class="relative z-10 w-12 h-12 rounded-full overflow-hidden border-4 border-gray-400 hover:border-gray-300 focus:border-gray-300 focus:outline-none">
+                    <img src="https://source.unsplash.com/random/400x400">
+                </button>
+            </div>
+        </header>
+
+        <header class="w-full bg-sidebar py-5 px-6 sm:hidden inline-block outline outline-gray-300 outline-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <i class="material-symbols-outlined text-black mobile-surfer">surfing</i>
+                    <a href="dashboard.html" class="text-black text-3xl font-bold uppercase hover:text-gray-300 ml-2">
+                        Surf Hey!
+                    </a>
+                </div>
+                <button id="nav-toggle" class="text-black text-3xl focus:outline-none">
+                    <i class="material-symbols-outlined">menu</i>
+                </button>
+            </div>
+
+            <nav id="mobile-nav" class="flex flex-col pt-4 hidden">
+                <a href="dashboard.html" class="flex items-center text-dark py-2 pl-4 hover:bg-sky-200 hover:text-black">
+                    <i class="material-icons mr-2 text-xl">grid_view</i>
+                    Dashboard
+                </a>
+                <a href="account.html" class="flex items-center text-white py-2 pl-4 bg-sky-800 hover:bg-sky-200 hover:text-black">
+                    <i class="material-icons mr-2 text-xl">person</i>
+                    My Account
+                </a>
+                <a href="login.html" class="flex items-center text-dark py-2 pl-4 hover:bg-sky-200 hover:text-black">
+                    <i class="material-icons mr-2 text-xl">logout</i>
+                    Sign Out
+                </a>
+                <!-- <button class="w-full text-dark bg-white cta-btn font-semibold py-2 mt-3 rounded-lg shadow-lg hover:shadow-xl hover:bg-gray-300 flex items-center justify-center">
+                   <i class="fas fa-arrow-circle-up mr-3"></i> Upgrade to Pro!
+               </button> -->
+            </nav>
+        </header>
+
+        <div class="w-full overflow-x-hidden border-t flex flex-col">
+            <main class="w-full flex-grow p-6">
+                <h1 class="text-3xl font-bold text-black text-center text-5xl mb-5 sm:hidden">Account</h1>
+                <div class="feed flex flex-wrap">
+                    <div class="w-full md:w-full lg:w-2/5 p-4">
+                        <div class="bg-white rounded-lg overflow-hidden border-4 border-gray-300 h-full">
+                            <div class="flex flex-col justify-center items-center h-full p-8">
+                                <img src="https://source.unsplash.com/random/400x400" alt="Profile Picture" class="w-32 h-32 rounded-full mx-auto mb-4">
+                                <h2 class="text-xl font-semibold">Username</h2>
+                                <p class="text-gray-600">Surfer ID: 123456</p>
+                                <button class="bg-sky-800 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-sky-700 transition ease-in-out duration-150">Upgrade to Pro!</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-full lg:w-3/5 p-4">
+                        <div class="bg-white rounded-lg overflow-hidden border-4 border-gray-300 p-8">
+                            <form>
+                                <div class="">
+                                    <label class="block text-gray-700 text-base font-bold mb-2" for="username">Username</label>
+                                    <input class="w-full bg-sky-200 text-black placeholder-gray-500 border-0 rounded-full p-2 px-4 mb-4 focus:text-white focus:bg-sky-800 focus:outline-none transition ease-in-out duration-150" id="username" type="text" placeholder="Username">
+                                </div>
+                                <div class="">
+                                    <label class="block text-gray-700 text-base font-bold mb-2" for="surfer-id">Surfer ID</label>
+                                    <input class="w-full bg-sky-200 text-black placeholder-gray-500 border-0 rounded-full p-2 px-4 mb-4 focus:text-white focus:bg-sky-800 focus:outline-none transition ease-in-out duration-150" id="surfer-id" type="text" placeholder="Surfer ID">
+                                </div>
+                                <div class="">
+                                    <label class="block text-gray-700 text-base font-bold mb-2" for="password">Password</label>
+                                    <input class="w-full bg-sky-200 text-black placeholder-gray-500 border-0 rounded-full p-2 px-4 mb-4 focus:text-white focus:bg-sky-800 focus:outline-none transition ease-in-out duration-150" id="password" type="password" placeholder="Password">
+                                </div>
+                                <button class="bg-sky-800 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-sky-700 transition ease-in-out duration-1504">Save Changes</button>
+                            </form>
+                        </div>
+                    </div> 
+                </div>
+            </main>
+        </div>
+
+    </div>
+
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+        integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+
+    <!-- ChartJS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

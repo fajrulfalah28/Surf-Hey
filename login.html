@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey Surf!!</title>
+    <meta name="author" content="Muhammad Fajrul Falah">
+    <meta name="description" content="">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body class="font-family-jakarta flex">
+    <div class="w-full flex h-screen overflow-y-hidden">
+        <div class="w-full flex flex-wrap">
+            <div class="hidden w-2/5 sm:flex flex-col items-center justify-center md:hidden lg:flex">
+                <i class="material-symbols-outlined mr-2" style="font-size: 4rem; font-weight: 100;">surfing</i>
+                <h1 class="text-6xl font-bold mb-4">Surf Hey!</h1>
+                <div class="px-4 pb-4">
+                    <p class="text-2xl text-gray-600">Dive into Surveys with Surf Hey!
+                    </p>
+                </div>
+            </div>
+
+            <div class="w-full flex flex-col items-center justify-center bg-sky-800 md:w-full lg:w-3/5">
+                <div class="flex md:flex lg:hidden flex flex-col items-center justify-center">
+                    <i class="material-symbols-outlined mr-2"
+                        style="font-size: 4rem; font-weight: 100; color:white;">surfing</i>
+                    <h1 class="text-6xl text-white font-bold mb-4">Surf Hey!</h1>
+                    <div class="px-4 pb-4">
+                        <p class="text-2xl text-white ">Dive into Surveys with Surf Hey!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="w-full max-w-md bg-white rounded-lg shadow-md mt-10 p-6">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-4">Login</h2>
+                    <form class="flex flex-col">
+                        <form class="flex flex-col">
+                            <input type="email"
+                                class="bg-sky-200 text-black placeholder-gray-500 border-0 rounded-full p-2 px-4 mb-4 focus:text-white focus:bg-sky-800 focus:outline-none transition ease-in-out duration-150"
+                                placeholder="Username / Surfer ID">
+                            <input type="password"
+                                class="bg-sky-200 text-black placeholder-gray-500 border-0 rounded-full p-2 px-4 mb-4 focus:text-white focus:bg-sky-800 focus:outline-none transition ease-in-out duration-150"
+                                placeholder="Password">
+                                <div class="flex flex-wrap justify-between">
+                                    <div class="flex items-center">
+                                        <label for="remember-me" class="text-sm text-gray-900 cursor-pointer">
+                                            <input type="checkbox" id="remember-me" class="mr-2">
+                                            Remember me
+                                        </label>
+                                    </div>
+                                    <a href="#" class="text-sm text-blue-500 hover:underline ml-4">Forgot password?</a>
+
+                                </div>
+                                <p class="text-gray-900 mt-4 text-sm"> Not a surfer yet? <a href="signup.html"
+                                    class="text-blue-500 -200 hover:underline mt-4 text-sm">Sign Up.</a>
+                            </p>
+
+                            <button type="submit"
+                                class="bg-sky-800 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-sky-700 transition ease-in-out duration-150">Login</button>
+                        </form>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"
+        integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
+
+    <!-- ChartJS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
