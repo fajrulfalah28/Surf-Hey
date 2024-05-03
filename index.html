@@ -39,32 +39,38 @@
 
                 <div class="w-full max-w-md bg-white rounded-lg shadow-md mt-10 p-6">
                     <h2 class="text-2xl font-bold text-gray-900 mb-4">Login</h2>
-                    <form class="flex flex-col">
-                        <form class="flex flex-col">
-                            <input type="email"
-                                class="bg-sky-200 text-black placeholder-gray-500 border-0 rounded-full p-2 px-4 mb-4 focus:text-white focus:bg-sky-800 focus:outline-none transition ease-in-out duration-150"
-                                placeholder="Username / Surfer ID">
-                            <input type="password"
-                                class="bg-sky-200 text-black placeholder-gray-500 border-0 rounded-full p-2 px-4 mb-4 focus:text-white focus:bg-sky-800 focus:outline-none transition ease-in-out duration-150"
-                                placeholder="Password">
-                                <div class="flex flex-wrap justify-between">
-                                    <div class="flex items-center">
-                                        <label for="remember-me" class="text-sm text-gray-900 cursor-pointer">
-                                            <input type="checkbox" id="remember-me" class="mr-2">
-                                            Remember me
-                                        </label>
-                                    </div>
-                                    <a href="#" class="text-sm text-blue-500 hover:underline ml-4">Forgot password?</a>
-
-                                </div>
-                                <p class="text-gray-900 mt-4 text-sm"> Not a surfer yet? <a href="signup.html"
-                                    class="text-blue-500 -200 hover:underline mt-4 text-sm">Sign Up.</a>
-                            </p>
-
-                            <button type="submit"
-                                class="bg-sky-800 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-sky-700 transition ease-in-out duration-150">Login</button>
-                        </form>
+                    <form id="loginForm" class="flex flex-col">
+                        <input type="text"
+                            class="bg-sky-200 text-black placeholder-gray-500 border-0 rounded-full p-2 px-4 mb-4 focus:text-white focus:bg-sky-800 focus:outline-none transition ease-in-out duration-150"
+                            placeholder="Username / Surfer ID">
+                        <input type="password"
+                            class="bg-sky-200 text-black placeholder-gray-500 border-0 rounded-full p-2 px-4 mb-4 focus:text-white focus:bg-sky-800 focus:outline-none transition ease-in-out duration-150"
+                            placeholder="Password">
+                        <div class="flex flex-wrap justify-between">
+                            <div class="flex items-center">
+                                <label for="remember-me" class="text-sm text-gray-900 cursor-pointer">
+                                    <input type="checkbox" id="remember-me" class="mr-2">
+                                    Remember me
+                                </label>
+                            </div>
+                            <a href="#" class="text-sm text-blue-500 hover:underline ml-4">Forgot password?</a>
+                
+                        </div>
+                        <p class="text-gray-900 mt-4 text-sm"> Not a surfer yet? <a href="signup.html"
+                                class="text-blue-500 -200 hover:underline mt-4 text-sm">Sign Up.</a>
+                        </p>
+                
+                        <button type="submit"
+                            class="bg-sky-800 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-sky-700 transition ease-in-out duration-150">Login</button>
                     </form>
+                
+                    <div id="failedModal" class="hidden fixed inset-0 flex items-center justify-center z-50 shadow shadow-md">
+                        <div class="bg-white rounded-lg p-4 max-w-xs mx-auto">
+                            <p class="text-gray-700">Invalid username or password!</p>
+                            <button id="closeModal"
+                                class="bg-sky-800 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-sky-700 transition ease-in-out duration-150">Close</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
