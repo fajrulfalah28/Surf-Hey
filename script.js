@@ -47,11 +47,8 @@ $('#delAccButton').click(function() {
   $('#deleteAccModal').removeClass('hidden');
 });
 
-$('#declineDelButton').click(function() {
+$('#declineDelButton, #confirmDelButton').click(function() {
   $('#deleteAccModal').addClass('hidden');
 });
-
-$('#confirmDelButton').click(function() {
-  $('#deleteAccModal').addClass('hidden');
-});
+  
 });
