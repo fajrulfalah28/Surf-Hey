@@ -25,21 +25,33 @@ $(document).ready(function () {
     var password = $('input[type="password"]').val();
 
     if (username === 'username' && password === 'password') {
-        alert('Login successful');
+      alert('Login successful');
 
-        setTimeout(function() {
-          window.location.href = 'dashboard.html';
-      }, 2000);
+      setTimeout(function () {
+        window.location.href = 'dashboard.html';
+      }, 1000);
     } else {
-        $('#failedModal').removeClass('hidden');
+      $('#failedModal').removeClass('hidden');
     }
-});
+  });
 
-$('#closeModal').click(function () {
+  $('#closeModal').click(function () {
     $('#failedModal').addClass('hidden');
-});
+  });
 
-  $('#account-button').on('click', function() {
+  $('#account-button').on('click', function () {
     window.location.href = 'account.html';
   });
+
+$('#delAccButton').click(function() {
+  $('#deleteAccModal').removeClass('hidden');
+});
+
+$('#declineDelButton').click(function() {
+  $('#deleteAccModal').addClass('hidden');
+});
+
+$('#confirmDelButton').click(function() {
+  $('#deleteAccModal').addClass('hidden');
+});
 });
