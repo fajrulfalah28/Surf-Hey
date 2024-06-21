@@ -120,13 +120,28 @@
                     </div>
                     <div class="w-full md:w-full lg:w-full p-4">
                         <div class="bg-white rounded-lg overflow-hidden border-4 border-gray-300 h-full">
-                            <div class="flex flex-col h-full p-8">
-                                <h2 class="text-xl font-semibold">Delete Account</h2>
-                                <p class="text-gray-600">Are you sure you want to delete your account?</p>
-                                <button class="bg-rose-600 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-rose-500 transition ease-in-out duration-150 lg:w-1/4">Delete Account</button>
-                            </div>
+                          <div class="flex flex-col h-full p-8">
+                            <h2 class="text-xl font-semibold">Delete Account</h2>
+                            <button id="delAccButton" class="bg-rose-600 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-rose-500 transition ease-in-out duration-150 lg:w-1/4">
+                              Delete
+                            </button>
+                          </div>
                         </div>
-                    </div>
+                        <div id="deleteAccModal" class="hidden fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+                          <div class="bg-white flex flex-col rounded-lg p-4 max-w-xs mx-auto justify-center items-center text-center">
+                            <h2 class="text-xl font-semibold">Delete Account</h2>
+                            <p class="text-gray-600">Are you sure you want to delete your account?</p>
+                            <div class="flex space-x-4 mt-4">
+                              <button id="confirmDelButton" class="bg-rose-600 text-white font-bold py-2 px-4 rounded-md hover:bg-rose-500 transition ease-in-out duration-150">
+                                Yes
+                              </button>
+                              <button id="declineDelButton" class="bg-sky-800 text-white font-bold py-2 px-4 rounded-md hover:bg-sky-700 transition ease-in-out duration-150">
+                                Not Yet
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                 </div>
             </main>
         </div>
